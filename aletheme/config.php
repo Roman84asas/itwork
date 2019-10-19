@@ -183,12 +183,12 @@ function aletheme_get_options() {
 						"desc" => "Your facebook profile URL.",
 						"id" => "ale_fb",
 						"std" => "",
-						"type" => "text");    
-    $options[] = array( "name" => "Pinterest",
-                        "desc" => "Your pinteres profile URL.",
-                        "id" => "ale_pint",
+						"type" => "text");
+    $options[] = array( "name" => "Vkontakte",
+                        "desc" => "Your VK profile URL.",
+                        "id" => "ale_vk",
                         "std" => "",
-                        "type" => "text");    
+                        "type" => "text");
     $options[] = array( "name" => "Linkedin",
                         "desc" => "Your linked profile URL.",
                         "id" => "ale_linked",
@@ -204,17 +204,12 @@ function aletheme_get_options() {
                         "id" => "ale_emailcont",
                         "std" => "",
                         "type" => "text");
-    $options[] = array( "name" => "VKontakte",
-                        "desc" => "Your VKontakte profile URL.",
-                        "id" => "ale_VK",
-                        "std" => "",
-                        "type" => "text");
+
     $options[] = array( "name" => "Show RSS",
                         "desc" => "Check if you want to show the RSS icon on your site",
                         "id" => "ale_rssicon",
                         "std" => "1",
                         "type" => "checkbox");
-    
 
 	
 	$options[] = array( "name" => "Facebook Application ID",
