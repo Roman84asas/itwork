@@ -9,11 +9,16 @@ jQuery(function($) {
         controlNav: false
     });
 
-    $('.newhomeslider').flexslider({
+    $('.homeslider').flexslider({
         animation:'slide',
-        smoothHeight:true,
+        //smoothHeight:true,
+        prevText: "<i class=\"fas fa-angle-left\"></i>",
+        nextText: "<i class=\"fas fa-angle-right\"></i>",
         controlNav: false
     });
+
+    $('.homeslider .flex-viewport').css('overflow', 'visible');
+
 
     $('.menu_icon i.fa-bars').on('click', function (){
         $('.menu_icon i.fa-bars').css('display', 'none');
