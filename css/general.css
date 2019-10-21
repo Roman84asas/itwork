@@ -876,6 +876,9 @@ html[xmlns] .slides {
 .top_header .header_third.social_section i {
   margin-left: 30px;
 }
+/*
+*Home slider
+*/
 .home_slider {
   overflow-x: hidden;
   overflow-y: hidden;

@@ -19,7 +19,6 @@ jQuery(function($) {
 
     $('.homeslider .flex-viewport').css('overflow', 'visible');
 
-
     $('.menu_icon i.fa-bars').on('click', function (){
         $('.menu_icon i.fa-bars').css('display', 'none');
         $('.menu_icon i.fa-times').css('display', 'inline-block');
