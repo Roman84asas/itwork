@@ -265,6 +265,7 @@
         display: inline-block;
         float: left;
         line-height: 105px;
+        min-width: 18px;
 
         i {
           font-size: 20px;
@@ -362,6 +363,9 @@
 }
 
 .home_slider {
+  overflow-x: hidden;
+  overflow-y: hidden;
+
   .flexslider {
     width: 50%;
     float: left;
@@ -473,3 +477,225 @@
     }
   }
 }
+
+/*
+*Footer Styles
+*/
+
+footer.main-footer {
+  min-height: 470px;
+  background: @bagr-color url(img/footer.jpg) bottom center no-repeat;
+
+  .top_footer {
+    min-height: 350px;
+
+    .footer_inner {
+      margin-top: 75px;
+      float: left;
+
+      &.contact,&.menu-info,&.footer_logo {
+        width: 22.2%;
+      }
+
+      &.twitter {
+        width: 33.3%;
+      }
+
+      &.contact {
+        font-family: Arial, Helvetica, sans-serif;
+        color: @grey-color;
+
+        h5 {
+          font-size: 18px;
+          color: #000000;
+          text-transform: none;
+          margin: 30px 0 20px 0;
+        }
+
+        .footer_phone {
+          color: inherit;
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+
+        .footer_address {
+          color: inherit;
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+
+        .footer_email {
+          color: inherit;
+          font-size: 12px;
+          margin-bottom: 10px;
+
+          a {
+            color: inherit;
+          }
+        }
+      }
+
+      &.menu-info {
+        font-family: Arial, Helvetica, sans-serif;
+
+        h5 {
+          font-size: 18px;
+          color: #000000;
+          text-transform: none;
+          margin: 30px 0 20px 0;
+        }
+
+        ul.footermenu  {
+          color: @grey-color;
+          font-size: 12px;
+          line-height: 28px;
+
+          a {
+            color: inherit;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bottom_footer {
+    min-height: 120px;
+    line-height: 120px;
+    position: relative;
+
+    &::before{
+      content:"";
+      width: 37%;
+      display: block;
+      height: 1px;
+      border-top:1px solid @grey-color;
+      position: absolute;
+      top:0;
+      left:0;
+    }
+
+    &::after{
+      content:"";
+      width: 37%;
+      display: block;
+      height: 1px;
+      border-top:1px solid @grey-color;
+      position: absolute;
+      top:0;
+      right:0;
+    }
+
+    .copyrights {
+      float: left;
+      width: 35%;
+      color: @grey-color;
+      font-size: 11px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+    }
+
+    .footer_social {
+      float: right;
+      width: 35%;
+      color: @grey-color;
+      text-align: right;
+      font-size: 20px;
+      line-height: 105px;
+
+      a {
+        color: inherit;
+        .transition(all 300ms easy-in-out);
+
+        &:hover {
+          color: @dgrey-color;
+          .transition(all 300ms easy-in-out);
+        }
+      }
+
+      i {
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+.widget_latest {
+  margin-left: 40px;
+
+  .footer_widget_title {
+    font-size: 18px;
+    color: @grey-color;
+    text-transform: none;
+    margin: 30px 0 10px 0;
+    line-height: 24px;
+
+    &::before {
+      content: "\f05a";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 600;
+      font-size: 18px;
+      color: @hover-color;
+      margin-right: 15px;
+    }
+  }
+
+  .latest_tweeter {
+    font-size: 13px;
+    color: @grey-color;
+    line-height: 20px;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+
+    ul {
+      .ale_about_widget {
+        color: inherit;
+        margin-top: 5px;
+      }
+    }
+
+    .flex-control-nav {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: 34px;
+
+      li {
+        display: inline-block;
+        font-size: 0;
+        margin: 7px;
+
+        a {
+          width: 4px;
+          height: 4px;
+          display: block;
+
+          &.flex-active {
+            &::before {
+              color: @dgrey-color;
+            }
+          }
+
+          &::before {
+            content: "\f111";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 600;
+            font-size: 8px;
+            .transition(all 300ms easy-in-out);
+            color: @grey-color;
+
+            &:hover {
+              color: @dgrey-color;
+              .transition(all 300ms easy-in-out);
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+

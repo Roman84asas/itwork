@@ -31,15 +31,16 @@ function aletheme_get_options() {
 	$options[] = array("name" => "Theme",
 						"type" => "heading");
 
+
     $options[] = array( "name" => "Site Logo",
-                        "desc" => "Upload or put the site logo link (Default logo size: 133-52px)",
+                        "desc" => "Upload or put the site logo link",
                         "id" => "ale_sitelogo",
                         "std" => "",
                         "type" => "upload");
 
     $options[] = array( "name" => "Site Footer Logo",
-                        "desc" => "Upload or put the site logo link (Default logo size: 133-52px)",
-                        "id" => "ale_sitelogofooter",
+                        "desc" => "Upload or put the site logo link",
+                        "id" => "ale_footerlogo",
                         "std" => "",
                         "type" => "upload");
 
@@ -47,8 +48,7 @@ function aletheme_get_options() {
                         "desc" => "Get the slug on the Sliders Setting Page",
                         "id"   => "ale_homesliderslug",
                         "std"  => "",
-                        "type" => "text",
-    );
+                        "type" => "text");
 
     $options[] = array( 'name' => "Manage Background",
                         'desc' => "Select the background color, or upload a custom background image. Default background is the #f5f5f5 color",
@@ -105,8 +105,11 @@ function aletheme_get_options() {
                         "std" => "",
                         "type" => "text");
 
+
+
     $options[] = array( "name" => "Typography",
                         "type" => "heading");
+
 
     $options[] = array( "name" => "Select the body Font from Google Library",
                         "desc" => "The default Font is - Raleway",
@@ -119,8 +122,7 @@ function aletheme_get_options() {
                         "desc" => "The default Font (extended) is - 600",
                         "id" => "ale_headerfontex",
                         "std" => "600",
-                        "type" => "text",
-                        );
+                        "type" => "text");
 
     $options[] = array( "name" => "Select the Headers Font from Google Library",
                         "desc" => "The default Font is - Libre Baskerville",
@@ -133,8 +135,7 @@ function aletheme_get_options() {
                         "desc" => "The default Font (extended) is - 400,400italic",
                         "id" => "ale_mainfontex",
                         "std" => "400,400italic",
-                        "type" => "text",
-                        );
+                        "type" => "text");
 
     $options[] = array( 'name' => "H1 Style",
                         'desc' => "Change the h1 style",
@@ -178,8 +179,11 @@ function aletheme_get_options() {
                         'std' => array('size' => '11px','face' => 'Libre+Baskerville','style' => 'normal','color' => '#111111'),
                         'type' => 'typography');
 
+
+
 	$options[] = array( "name" => "Social",
 						"type" => "heading");
+
 
     $options[] = array( "name" => "Twitter",
                         "desc" => "Your twitter profile URL.",
@@ -217,7 +221,6 @@ function aletheme_get_options() {
                         "id" => "ale_rssicon",
                         "std" => "1",
                         "type" => "checkbox");
-
 	
 	$options[] = array( "name" => "Facebook Application ID",
 						"desc" => "If you have Application ID you can connect the blog to your Facebook Profile and monitor statistics there.",
@@ -230,6 +233,30 @@ function aletheme_get_options() {
 						"id" => "ale_og_enabled",
 						"std" => "",
 						"type" => "checkbox");
+
+
+
+    $options[] = array( "name" => "Footer Settings",
+                        "type" => "heading");
+
+
+    $options[] = array( "name" => "Footer Phone",
+                        "desc" => "Insert your number phone",
+                        "id"   => "ale_footer_phone",
+                        "std"  => "",
+                        "type" => "text");
+
+    $options[] = array( "name" => "Footer Address",
+                        "desc" => "Insert your address",
+                        "id"   => "ale_footer_address",
+                        "std"  => "",
+                        "type" => "text");
+
+    $options[] = array( "name" => "Footer Mail",
+                        "desc" => "Insert your mail",
+                        "id"   => "ale_footer_email",
+                        "std"  => "",
+                        "type" => "text");
 
 
 	
@@ -274,6 +301,8 @@ function aletheme_get_options() {
 	
 	return $options;
 }
+
+
 
 /**
  * Add custom scripts to Options Page

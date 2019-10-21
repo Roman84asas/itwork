@@ -33,6 +33,12 @@ jQuery(function($) {
 
         $('.top_navigation').css('display', 'none');
     });
+
+    $('.latest_tweeter').flexslider({
+        animation:'slide',
+        directionNav:false,
+        selector: "ul > div"
+    })
 });
 
 Modernizr.addTest('ipad', function () {
