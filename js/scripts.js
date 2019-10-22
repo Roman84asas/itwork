@@ -6,7 +6,8 @@ jQuery(function($) {
     $('.portfolioslider').flexslider({
         animation:'slide',
         smoothHeight:true,
-        controlNav: false
+        controlNav: false,
+        touch: true,
     });
 
     $('.homeslider').flexslider({
