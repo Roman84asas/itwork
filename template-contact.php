@@ -63,7 +63,7 @@ get_header();
 
             <div class="contact_form">
                 <div class="inner_page_title">
-                    <h3><?php echo esc_attr( _e('Contacts form', 'aletheme') ); ?></h3>
+                    <h3 class="inner_title"><?php echo esc_attr( _e('Contacts form', 'aletheme') ); ?></h3>
                 </div>
 
                 <form method="post" action="<?php the_permalink();?>">
@@ -74,11 +74,11 @@ get_header();
                         <p class="error"><?php echo esc_attr($error['msg']); ?></p>
                     <?php endif; ?>
 
-                    <div class="item_line">
+                    <div class="item_line cf">
                         <div class="item_input">
                             <input name="contact[name]"
                                    type="text"
-                                   placeholder="Your Name (required)"
+                                   placeholder="Your Name"
                                    value="<?php echo esc_attr(isset($_POST['contact']['name']) ? $_POST['contact']['name'] : ''); ?>"
                                    required="required"
                                    id="contact-form-name"
@@ -88,7 +88,7 @@ get_header();
                         <div class="item_input">
                             <input name="contact[phone]"
                                    type="text"
-                                   placeholder="Phone (required)"
+                                   placeholder="Your Phone"
                                    value="<?php echo esc_attr(isset($_POST['contact']['phone']) ? $_POST['contact']['phone'] : ''); ?>"
                                    required="required"
                                    id="contact-form-phone"
@@ -98,7 +98,7 @@ get_header();
                         <div class="item_input">
                             <input name="contact[email]"
                                    type="email"
-                                   placeholder="Email (required)"
+                                   placeholder="Your PEmail"
                                    value="<?php echo esc_attr(isset($_POST['contact']['email']) ? $_POST['contact']['email'] : ''); ?>"
                                    required="required"
                                    id="contact-form-email"
@@ -110,9 +110,7 @@ get_header();
                         <textarea name="contact[message]"
                                   placeholder="Message..."
                                   id="contact-form-message"
-                                  required="required">
-                            <?php echo esc_attr( isset($_POST['contact']['message']) ? $_POST['contact']['message'] : ''); ?>
-                        </textarea>
+                                  required="required"><?php echo esc_attr( isset($_POST['contact']['message']) ? $_POST['contact']['message'] : ''); ?></textarea>
                     </div>
 
                     <div class="item_line">
