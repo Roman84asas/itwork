@@ -423,7 +423,7 @@ if (!function_exists('ale_map')) {
 
     //Loads Google Map API
     function ale_map_load_scripts() {
-        wp_register_script( 'google-maps-api', 'http://maps.google.com/maps/api/js?sensor=false' );
+        wp_register_script( 'google-maps-api', 'http://maps.google.com/maps/api/js' );
     }
     add_action( 'wp_enqueue_scripts', 'ale_map_load_scripts' );
 

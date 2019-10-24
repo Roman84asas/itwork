@@ -13,7 +13,7 @@
 
 <body <?php body_class(); ?> >
     <header class="top_header">
-        <div class="wrapper cf">
+        <div class="wrapper">
             <div class="header_third search_section menu_button">
                 <div class="menu_icon">
                     <i class="fas fa-bars"></i>

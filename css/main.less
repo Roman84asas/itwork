@@ -22,6 +22,8 @@
   height: 105px;
   background: @bagr-color;
   position: relative;
+  display: flex;
+  flex-direction: row;
 
   .top_navigation {
     display: none;
@@ -35,6 +37,9 @@
 
     .wrapper {
       position: relative;
+      flex-direction: row;
+      display: flex;
+      justify-content: space-between;
 
       &::before {
         content: '';
@@ -53,7 +58,7 @@
     }
 
     .donate_button {
-      float: right;
+      right: 0;
       display: block;
       height: 90px;
 
@@ -72,17 +77,19 @@
 
     .ale_headerrmenu {
       line-height: 90px;
-      display: inline-block;
+      display: flex;
+      justify-content: center;
+
 
       li {
-        display: inline-block;
-        float: left;
+        display: block;
         color: #ffffff;
         font-size: 14px;
         font-family: Arial, Helvetica, sans-serif;
         height: 90px;
         position: relative;
         margin-right: 2px;
+        width: 130px;
 
         &:hover {
           .sub-menu {
@@ -93,7 +100,6 @@
         .sub-menu {
           background-color: #FFFFFF;
           color: @grey-color;
-          width: 140px;
           box-sizing: border-box;
           padding-top: 25px;
           padding-bottom: 25px;
@@ -149,6 +155,7 @@
 
             .sub-menu {
               position: absolute;
+              width: inherit;
               left: 100%;
               top: 0;
               border: 0;
@@ -212,11 +219,7 @@
           margin-top: -2px;
         }
 
-        &:first-child {
-          a {
-            padding-left: 0;
-          }
-        }
+
         &:last-child {
           &::after {
             display: none;
@@ -365,10 +368,11 @@
 .home_slider {
   overflow-x: hidden;
   overflow-y: hidden;
+  display: flex;
+  align-items: center;
 
   .flexslider {
     width: 50%;
-    float: left;
     position: relative;
 
     .flex-prev {
@@ -427,17 +431,17 @@
             display: block;
             padding-top: 150px;
             padding-left: 80px;
-            font-size: 25px;
+            font-size: 20px;
             color: #FFFFFF;
-            font-family: "Playfair Display";
+            font-family: "Playfair Display SC";
           }
 
           .mainsliderdesc {
             display: block;
             padding: 70px 40% 60px 80px;
-            font-size: 65px;
+            font-size: 55px;
             color: #FFFFFF;
-            font-family: "Playfair Display";
+            font-family: "Playfair Display SC";
           }
 
           .sliderlinkmore {
@@ -488,10 +492,11 @@ footer.main-footer {
 
   .top_footer {
     min-height: 350px;
+    display: flex;
+    align-content: space-between;
 
     .footer_inner {
       margin-top: 75px;
-      float: left;
 
       &.contact,&.menu-info,&.footer_logo {
         width: 22.2%;
@@ -561,7 +566,6 @@ footer.main-footer {
       }
     }
   }
-
   .bottom_footer {
     min-height: 120px;
     line-height: 120px;
@@ -630,7 +634,7 @@ footer.main-footer {
     font-size: 18px;
     color: @grey-color;
     text-transform: none;
-    margin: 30px 0 10px 0;
+    margin: 23px 0 10px 0;
     line-height: 24px;
 
     &::before {
@@ -661,7 +665,7 @@ footer.main-footer {
       position: absolute;
       top: 0;
       right: 0;
-      margin-top: 34px;
+      margin-top: 28px;
 
       li {
         display: inline-block;
@@ -759,17 +763,12 @@ footer.main-footer {
 
   .contacts_data {
     margin-bottom: 90px;
-    margin-left: 80px;
-    margin-right: 80px;
+    display: flex;
+    justify-content: space-between;
 
     .third_part {
-      width: 33.3%;
-      float: left;
-
-
       &.emailbox {
         box-sizing: border-box;
-        padding-left: 40px;
       }
 
       i.fas {
@@ -806,6 +805,8 @@ footer.main-footer {
 }
 
 .contact_form {
+  margin-bottom: 80px;
+
   .inner_page_title {
     position: relative;
     margin-bottom: 30px;
@@ -912,5 +913,15 @@ footer.main-footer {
       padding: 0 25px;
       .rounded(2px);
     }
+  }
+}
+
+.gallery-page {
+  .gallery-post {
+    display: inline-block;
+    float: left;
+    margin: 0 20px 20px 0;
+
+
   }
 }

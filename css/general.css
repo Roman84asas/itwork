@@ -563,6 +563,8 @@ html[xmlns] .slides {
   height: 105px;
   background: #eaeefb;
   position: relative;
+  display: flex;
+  flex-direction: row;
 }
 .top_header .top_navigation {
   display: none;
@@ -576,6 +578,9 @@ html[xmlns] .slides {
 }
 .top_header .top_navigation .wrapper {
   position: relative;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
 }
 .top_header .top_navigation .wrapper::before {
   content: '';
@@ -592,7 +597,7 @@ html[xmlns] .slides {
   border-color: transparent transparent #111111 transparent;
 }
 .top_header .top_navigation .donate_button {
-  float: right;
+  right: 0;
   display: block;
   height: 90px;
 }
@@ -609,17 +614,18 @@ html[xmlns] .slides {
 }
 .top_header .top_navigation .ale_headerrmenu {
   line-height: 90px;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
 }
 .top_header .top_navigation .ale_headerrmenu li {
-  display: inline-block;
-  float: left;
+  display: block;
   color: #ffffff;
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
   height: 90px;
   position: relative;
   margin-right: 2px;
+  width: 130px;
 }
 .top_header .top_navigation .ale_headerrmenu li:hover .sub-menu {
   display: block;
@@ -627,7 +633,6 @@ html[xmlns] .slides {
 .top_header .top_navigation .ale_headerrmenu li .sub-menu {
   background-color: #FFFFFF;
   color: #a1a1a1;
-  width: 140px;
   box-sizing: border-box;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -676,6 +681,7 @@ html[xmlns] .slides {
 }
 .top_header .top_navigation .ale_headerrmenu li .sub-menu li .sub-menu {
   position: absolute;
+  width: inherit;
   left: 100%;
   top: 0;
   border: 0;
@@ -732,9 +738,6 @@ html[xmlns] .slides {
   left: 100%;
   top: 3px;
   margin-top: -2px;
-}
-.top_header .top_navigation .ale_headerrmenu li:first-child a {
-  padding-left: 0;
 }
 .top_header .top_navigation .ale_headerrmenu li:last-child::after {
   display: none;
@@ -882,10 +885,11 @@ html[xmlns] .slides {
 .home_slider {
   overflow-x: hidden;
   overflow-y: hidden;
+  display: flex;
+  align-items: center;
 }
 .home_slider .flexslider {
   width: 50%;
-  float: left;
   position: relative;
 }
 .home_slider .flexslider .flex-prev {
@@ -944,16 +948,16 @@ html[xmlns] .slides {
   display: block;
   padding-top: 150px;
   padding-left: 80px;
-  font-size: 25px;
+  font-size: 20px;
   color: #FFFFFF;
-  font-family: "Playfair Display";
+  font-family: "Playfair Display SC";
 }
 .home_slider ul.slides li figure figcaption .mainsliderdesc {
   display: block;
   padding: 70px 40% 60px 80px;
-  font-size: 65px;
+  font-size: 55px;
   color: #FFFFFF;
-  font-family: "Playfair Display";
+  font-family: "Playfair Display SC";
 }
 .home_slider ul.slides li figure figcaption .sliderlinkmore {
   background-color: #fcf55b;
@@ -1006,10 +1010,11 @@ footer.main-footer {
 }
 footer.main-footer .top_footer {
   min-height: 350px;
+  display: flex;
+  align-content: space-between;
 }
 footer.main-footer .top_footer .footer_inner {
   margin-top: 75px;
-  float: left;
 }
 footer.main-footer .top_footer .footer_inner.contact,
 footer.main-footer .top_footer .footer_inner.menu-info,
@@ -1134,7 +1139,7 @@ footer.main-footer .bottom_footer .footer_social i {
   font-size: 18px;
   color: #a1a1a1;
   text-transform: none;
-  margin: 30px 0 10px 0;
+  margin: 23px 0 10px 0;
   line-height: 24px;
 }
 .widget_latest .footer_widget_title::before {
@@ -1160,7 +1165,7 @@ footer.main-footer .bottom_footer .footer_social i {
   position: absolute;
   top: 0;
   right: 0;
-  margin-top: 34px;
+  margin-top: 28px;
 }
 .widget_latest .latest_tweeter .flex-control-nav li {
   display: inline-block;
@@ -1254,16 +1259,11 @@ footer.main-footer .bottom_footer .footer_social i {
 }
 .container .contacts_data {
   margin-bottom: 90px;
-  margin-left: 80px;
-  margin-right: 80px;
-}
-.container .contacts_data .third_part {
-  width: 33.3%;
-  float: left;
+  display: flex;
+  justify-content: space-between;
 }
 .container .contacts_data .third_part.emailbox {
   box-sizing: border-box;
-  padding-left: 40px;
 }
 .container .contacts_data .third_part i.fas {
   font-size: 18px;
@@ -1296,6 +1296,9 @@ footer.main-footer .bottom_footer .footer_social i {
   -o-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   opacity: 0.6;
+}
+.contact_form {
+  margin-bottom: 80px;
 }
 .contact_form .inner_page_title {
   position: relative;
@@ -1410,5 +1413,10 @@ footer.main-footer .bottom_footer .footer_social i {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+}
+.gallery-page .gallery-post {
+  display: inline-block;
+  float: left;
+  margin: 0 20px 20px 0;
 }
 /*# sourceMappingURL=general.css.map */

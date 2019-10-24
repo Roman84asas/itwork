@@ -120,6 +120,11 @@ get_header();
                 </form>
             </div>
         </div>
+        <div class="contact_map">
+            <?php if (ale_get_meta('address')) {
+                echo esc_attr(do_shortcode('[ale_map address="'.ale_get_meta('address').'" width="100%" height="475px"]'));
+            } ?>
+        </div>
     </div>
 
 <?php get_footer(); ?>

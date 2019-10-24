@@ -345,6 +345,7 @@ function aletheme_metaboxes($meta_boxes) {
         'show_names' => true, // Show field names on the left
         'show_on'    => array( 'key' => 'page-template', 'value' => array('template-contact.php'), ), // Specific post templates to display this metabox
 
+
         'fields' => array(
             array(
                 'name' => 'Phone label',
@@ -843,22 +844,22 @@ function aletheme_get_images_sizes() {
 
         'gallery' => array(
             array(
-                'name'      => 'gallery-thumba',
-                'width'     => 430,
-                'height'    => 267,
+                'name'      => 'gallery-square',
+                'width'     => 225,
+                'height'    => 225,
                 'crop'      => true,
             ),
             array(
-                'name'      => 'gallery-mini',
-                'width'     => 100,
-                'height'    => 67,
+                'name'      => 'gallery-vertical',
+                'width'     => 470,
+                'height'    => 225,
                 'crop'      => true,
             ),
             array(
                 'name'      => 'gallery-big',
-                'width'     => 680,
-                'height'    => 9999,
-                'crop'      => false,
+                'width'     => 470,
+                'height'    => 470,
+                'crop'      => true,
             ),
         ),
         'post' => array(
@@ -918,8 +919,24 @@ function aletheme_get_post_types() {
                 ),
                 'show_in_nav_menus'=> true,
             ),
-            'singular' => 'Сервис',
-            'multiple' => 'Сервисы'
+            'singular' => 'Service',
+            'multiple' => 'Services'
+        ),
+        'article' => array(
+            'config' => array(
+                'public' => true,
+                'menu_position' => 20,
+                'has_archive'   => true,
+                'supports'=> array(
+                    'title',
+                    'editor',
+                    'excerpt',
+                    'comments'
+                ),
+                'show_in_nav_menus'=> true,
+            ),
+            'singular' => 'Article',
+            'multiple' => 'Articles',
         ),
     );
 }
@@ -942,8 +959,6 @@ function aletheme_get_taxonomies() {
             'singular'    => 'Gallery Category',
             'multiple'    => 'Gallery Categories',
         ),
-
-
         'services-category'    => array(
             'for'        => array('services'),
             'config'    => array(
@@ -951,18 +966,18 @@ function aletheme_get_taxonomies() {
                 'args'        => array('orderby' => 'term_order'),
                 'hierarchical' => true,
             ),
-            'singular'    => 'Категория',
-            'multiple'    => 'Категории',
+            'singular'    => 'Service Category',
+            'multiple'    => 'Services Categories',
         ),
-        'price'    => array(
-            'for'        => array('services'),
+        'article-category'    => array(
+            'for'        => array('article'),
             'config'    => array(
                 'sort'        => true,
                 'args'        => array('orderby' => 'term_order'),
                 'hierarchical' => true,
             ),
-            'singular'    => 'Цена сервиса',
-            'multiple'    => 'Цены сервисов',
+            'singular'    => 'Article Category',
+            'multiple'    => 'Articles Categories',
         ),
     );
 }
