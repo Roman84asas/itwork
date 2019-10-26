@@ -930,6 +930,7 @@ function aletheme_get_post_types() {
                 'supports'=> array(
                     'title',
                     'editor',
+                    'thumbnail',
                     'excerpt',
                     'comments'
                 ),
@@ -937,6 +938,9 @@ function aletheme_get_post_types() {
             ),
             'singular' => 'Article',
             'multiple' => 'Articles',
+            'columns'    => array(
+                'first_image',
+            )
         ),
     );
 }
