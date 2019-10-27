@@ -16,10 +16,10 @@ function aletheme_get_options() {
     $headerfont = array_merge(ale_get_safe_webfonts(), ale_get_google_webfonts());
 
     $background_defaults = array(
-        'color' => '',
-        'image' => '',
-        'repeat' => 'repeat',
-        'position' => 'top center',
+        'color'     => '',
+        'image'     => '',
+        'repeat'    => 'repeat',
+        'position'  => 'top center',
         'attachment'=>'scroll'
     );
 
@@ -29,19 +29,19 @@ function aletheme_get_options() {
 	$options = array();
 		
 	$options[] = array("name" => "Theme",
-						"type" => "heading");
+					   "type" => "heading");
 
 
     $options[] = array( "name" => "Site Logo",
                         "desc" => "Upload or put the site logo link",
-                        "id" => "ale_sitelogo",
-                        "std" => "",
+                        "id"   => "ale_sitelogo",
+                        "std"  => "",
                         "type" => "upload");
 
     $options[] = array( "name" => "Site Footer Logo",
                         "desc" => "Upload or put the site logo link",
-                        "id" => "ale_footerlogo",
-                        "std" => "",
+                        "id"   => "ale_footerlogo",
+                        "std"  => "",
                         "type" => "upload");
 
     $options[] = array( "name" => "Insert The Slider Slug",
@@ -52,57 +52,57 @@ function aletheme_get_options() {
 
     $options[] = array( 'name' => "Manage Background",
                         'desc' => "Select the background color, or upload a custom background image. Default background is the #f5f5f5 color",
-                        'id' => 'ale_background',
-                        'std' => $background_defaults,
+                        'id'   => 'ale_background',
+                        'std'  => $background_defaults,
                         'type' => 'background');
 
     $options[] = array( "name" => "Show Site Preloader",
                         "desc" => "Description kakoito.",
-                        "id" => "ale_backcover",
-                        "std" => "1",
+                        "id"   => "ale_backcover",
+                        "std"  => "1",
                         "type" => "checkbox");
 
     $options[] = array( "name" => "Uplaod a favicon icon",
                         "desc" => "Upload or put the link of your favicon icon",
-                        "id" => "ale_favicon",
-                        "std" => "",
+                        "id"   => "ale_favicon",
+                        "std"  => "",
                         "type" => "upload");
 
-	$options[] = array( "name" => "Comments Style",
-						"desc" => "Choose your comments style. If you want to use DISQUS comments please install and activate this plugin from <a href=\"" . admin_url('plugin-install.php?tab=search&type=term&s=Disqus+Comment+System&plugin-search-input=Search+Plugins') . "\">Wordpress Repository</a>.  If you want to use Livefyre Realtime Comments comments please install and activate this plugin from <a href=\"" . admin_url('plugin-install.php?tab=search&type=term&s=Livefyre+Realtime+Comments&plugin-search-input=Search+Plugins') . "\">Wordpress Repository</a>.",
-						"id" => "ale_comments_style",
-						"std" => "wp",
-						"type" => "select",
+	$options[] = array( "name"    => "Comments Style",
+						"desc"    => "Choose your comments style. If you want to use DISQUS comments please install and activate this plugin from <a href=\"" . admin_url('plugin-install.php?tab=search&type=term&s=Disqus+Comment+System&plugin-search-input=Search+Plugins') . "\">Wordpress Repository</a>.  If you want to use Livefyre Realtime Comments comments please install and activate this plugin from <a href=\"" . admin_url('plugin-install.php?tab=search&type=term&s=Livefyre+Realtime+Comments&plugin-search-input=Search+Plugins') . "\">Wordpress Repository</a>.",
+						"id"      => "ale_comments_style",
+						"std"     => "wp",
+						"type"    => "select",
 						"options" => $comments_style);
 
 	$options[] = array( "name" => "AJAX Comments",
 						"desc" => "Use AJAX on comments posting (works only with Alethemes Comments selected).",
-						"id" => "ale_ajax_comments",
-						"std" => "1",
+						"id"   => "ale_ajax_comments",
+						"std"  => "1",
 						"type" => "checkbox");
 
 	$options[] = array( "name" => "Social Sharing",
 						"desc" => "Enable social sharing for posts.",
-						"id" => "ale_social_sharing",
-						"std" => "1",
+						"id"   => "ale_social_sharing",
+						"std"  => "1",
 						"type" => "checkbox");
 
     $options[] = array( "name" => "Copyrights",
                         "desc" => "Your copyright message.",
-                        "id" => "ale_copyrights",
-                        "std" => "",
+                        "id"   => "ale_copyrights",
+                        "std"  => "",
                         "type" => "editor");
 
     $options[] = array( "name" => "Home Page Slider slug",
                         "desc" => "Insert the slider slug. Get the slug on Sliders Section",
-                        "id" => "ale_homeslugfull",
-                        "std" => "",
+                        "id"   => "ale_homeslugfull",
+                        "std"  => "",
                         "type" => "text");
 
     $options[] = array( "name" => "Blog Slider slug",
                         "desc" => "Insert the slider slug. Get the slug on Sliders Section",
-                        "id" => "ale_blogslugfull",
-                        "std" => "",
+                        "id"   => "ale_blogslugfull",
+                        "std"  => "",
                         "type" => "text");
 
 
@@ -111,72 +111,72 @@ function aletheme_get_options() {
                         "type" => "heading");
 
 
-    $options[] = array( "name" => "Select the body Font from Google Library",
-                        "desc" => "The default Font is - Raleway",
-                        "id" => "ale_headerfont",
-                        "std" => "Raleway",
-                        "type" => "select",
+    $options[] = array( "name"    => "Select the body Font from Google Library",
+                        "desc"    => "The default Font is - Raleway",
+                        "id"      => "ale_headerfont",
+                        "std"     => "Raleway",
+                        "type"    => "select",
                         "options" => $headerfont);
 
     $options[] = array( "name" => "Select the body Font (Extended) from Google Library",
                         "desc" => "The default Font (extended)",
-                        "id" => "ale_headerfontex",
-                        "std" => "600",
+                        "id"   => "ale_headerfontex",
+                        "std"  => "600",
                         "type" => "text");
 
-    $options[] = array( "name" => "Select the Headers Font from Google Library",
-                        "desc" => "The default Font is - Libre Baskerville",
-                        "id" => "ale_mainfont",
-                        "std" => "Libre+Baskerville",
-                        "type" => "select",
+    $options[] = array( "name"    => "Select the Headers Font from Google Library",
+                        "desc"    => "The default Font is - Libre Baskerville",
+                        "id"      => "ale_mainfont",
+                        "std"     => "Libre+Baskerville",
+                        "type"    => "select",
                         "options" => $headerfont);
 
     $options[] = array( "name" => "Select the Headers Font (Extended) from Google Library",
                         "desc" => "The default Font (extended)",
-                        "id" => "ale_mainfontex",
-                        "std" => "400,400italic",
+                        "id"   => "ale_mainfontex",
+                        "std"  => "400,400italic",
                         "type" => "text");
 
     $options[] = array( 'name' => "H1 Style",
                         'desc' => "Change the h1 style",
-                        'id' => 'ale_h1sty',
-                        'std' => array('size' => '22px','face' => 'Libre+Baskerville','style' => 'normal','color' => '#111111'),
+                        'id'   => 'ale_h1sty',
+                        'std'  => array('size' => '22px','face' => 'Libre+Baskerville','style' => 'normal','color' => '#111111'),
                         'type' => 'typography');
 
     $options[] = array( 'name' => "H2 Style",
                         'desc' => "Change the h2 style",
-                        'id' => 'ale_h2sty',
-                        'std' => array('size' => '20px','face' => 'Libre+Baskerville','style' => 'normal','color' => '#111111'),
+                        'id'   => 'ale_h2sty',
+                        'std'  => array('size' => '20px','face' => 'Libre+Baskerville','style' => 'normal','color' => '#111111'),
                         'type' => 'typography');
 
     $options[] = array( 'name' => "H3 Style",
                         'desc' => "Change the h3 style",
-                        'id' => 'ale_h3sty',
-                        'std' => array('size' => '18px','face' => 'Libre+Baskerville','style' => 'normal','color' => '#111111'),
+                        'id'   => 'ale_h3sty',
+                        'std'  => array('size' => '18px','face' => 'Libre+Baskerville','style' => 'normal','color' => '#111111'),
                         'type' => 'typography');
 
     $options[] = array( 'name' => "H4 Style",
                         'desc' => "Change the h4 style",
-                        'id' => 'ale_h4sty',
-                        'std' => array('size' => '16px','face' => 'Libre+Baskerville','style' => 'normal','color' => '#111111'),
+                        'id'   => 'ale_h4sty',
+                        'std'  => array('size' => '16px','face' => 'Libre+Baskerville','style' => 'normal','color' => '#111111'),
                         'type' => 'typography');
 
     $options[] = array( 'name' => "H5 Style",
                         'desc' => "Change the h5 style",
-                        'id' => 'ale_h5sty',
-                        'std' => array('size' => '14px','face' => 'Libre+Baskerville','style' => 'normal','color' => '#111111'),
+                        'id'   => 'ale_h5sty',
+                        'std'  => array('size' => '14px','face' => 'Libre+Baskerville','style' => 'normal','color' => '#111111'),
                         'type' => 'typography');
 
     $options[] = array( 'name' => "H6 Style",
                         'desc' => "Change the h6 style",
-                        'id' => 'ale_h6sty',
-                        'std' => array('size' => '12px','face' => 'Libre+Baskerville','style' => 'normal','color' => '#111111'),
+                        'id'   => 'ale_h6sty',
+                        'std'  => array('size' => '12px','face' => 'Libre+Baskerville','style' => 'normal','color' => '#111111'),
                         'type' => 'typography');
 
     $options[] = array( 'name' => "Body Style",
                         'desc' => "Change the body font style",
-                        'id' => 'ale_bodystyle',
-                        'std' => array('size' => '11px','face' => 'Libre+Baskerville','style' => 'normal','color' => '#111111'),
+                        'id'   => 'ale_bodystyle',
+                        'std'  => array('size' => '11px','face' => 'Libre+Baskerville','style' => 'normal','color' => '#111111'),
                         'type' => 'typography');
 
 
@@ -187,51 +187,51 @@ function aletheme_get_options() {
 
     $options[] = array( "name" => "Twitter",
                         "desc" => "Your twitter profile URL.",
-                        "id" => "ale_twi",
-                        "std" => "",
+                        "id"   => "ale_twi",
+                        "std"  => "",
                         "type" => "text");
 	$options[] = array( "name" => "Facebook",
 						"desc" => "Your facebook profile URL.",
-						"id" => "ale_fb",
-						"std" => "",
+						"id"   => "ale_fb",
+						"std"  => "",
 						"type" => "text");
     $options[] = array( "name" => "Vkontakte",
                         "desc" => "Your VK profile URL.",
-                        "id" => "ale_vk",
-                        "std" => "",
+                        "id"   => "ale_vk",
+                        "std"  => "",
                         "type" => "text");
     $options[] = array( "name" => "Linkedin",
                         "desc" => "Your linked profile URL.",
-                        "id" => "ale_linked",
-                        "std" => "",
+                        "id"   => "ale_linked",
+                        "std"  => "",
                         "type" => "text");
     $options[] = array( "name" => "Instagram",
                         "desc" => "Your instagram profile URL.",
-                        "id" => "ale_insta",
-                        "std" => "",
+                        "id"   => "ale_insta",
+                        "std"  => "",
                         "type" => "text");
     $options[] = array( "name" => "Email",
                         "desc" => "Your email",
-                        "id" => "ale_emailcont",
-                        "std" => "",
+                        "id"   => "ale_emailcont",
+                        "std"  => "",
                         "type" => "text");
 
     $options[] = array( "name" => "Show RSS",
                         "desc" => "Check if you want to show the RSS icon on your site",
-                        "id" => "ale_rssicon",
-                        "std" => "1",
+                        "id"   => "ale_rssicon",
+                        "std"  => "1",
                         "type" => "checkbox");
 	
 	$options[] = array( "name" => "Facebook Application ID",
 						"desc" => "If you have Application ID you can connect the blog to your Facebook Profile and monitor statistics there.",
-						"id" => "ale_fb_id",
-						"std" => "",
+						"id"   => "ale_fb_id",
+						"std"  => "",
 						"type" => "text");
 	
 	$options[] = array( "name" => "Enable Open Graph",
 						"desc" => "The <a href=\"http://www.ogp.me/\">Open Graph</a> protocol enables any web page to become a rich object in a social graph.",
-						"id" => "ale_og_enabled",
-						"std" => "",
+						"id"   => "ale_og_enabled",
+						"std"  => "",
 						"type" => "checkbox");
 
 
@@ -266,33 +266,33 @@ function aletheme_get_options() {
 	
 	$options[] = array( "name" => "Google Analytics",
 						"desc" => "Please insert your Google Analytics code here. Example: <strong>UA-22231623-1</strong>",
-						"id" => "ale_ga",
-						"std" => "",
+						"id"   => "ale_ga",
+						"std"  => "",
 						"type" => "text");
 	
 	$options[] = array( "name" => "Footer Code",
 						"desc" => "If you have anything else to add in the footer - please add it here.",
-						"id" => "ale_footer_info",
-						"std" => "",
+						"id"   => "ale_footer_info",
+						"std"  => "",
 						"type" => "textarea");
 
     $options[] = array( "name" => "Custom CSS Styles",
                         "desc" => "You can add here your styles. ex. .boxclass { padding:10px; }",
-                        "id" => "ale_customcsscode",
-                        "std" => "",
+                        "id"   => "ale_customcsscode",
+                        "std"  => "",
                         "type" => "textarea");
 
     $options[] = array( "name" => "Footer menu title",
                         "desc" => "Insert the footer menu title",
-                        "id" => "ale_footermenutitle",
-                        "std" => "Select a category",
+                        "id"   => "ale_footermenutitle",
+                        "std"  => "Select a category",
                         "type" => "text");
 
-    $options[] = array( "name" => "Footer menu title",
-                        "desc" => "Insert the footer menu title",
-                        "id" => "ale_footermenutitle_1",
-                        "std" => "",
-                        "type" => "images",
+    $options[] = array( "name"    => "Footer menu title",
+                        "desc"    => "Insert the footer menu title",
+                        "id"      => "ale_footermenutitle_1",
+                        "std"     => "",
+                        "type"    => "images",
                         "options" => array(
                             'image_1' => $imagepath.'/1col.png',
                             'image_2' => $imagepath.'/2cl.png',
@@ -312,9 +312,11 @@ function aletheme_options_custom_scripts() {
 
 <script type="text/javascript">
 jQuery(document).ready(function() {
+
     jQuery('#ale_commentongallery').click(function() {
         jQuery('#section-ale_gallerycomments_style').fadeToggle(400);
     });
+
     if (jQuery('#ale_commentongallery:checked').val() !== undefined) {
         jQuery('#section-ale_gallerycomments_style').show();
     }
@@ -390,6 +392,179 @@ function aletheme_metaboxes($meta_boxes) {
     );
 
     $meta_boxes[] = array(
+        'id'         => 'about_page_metabox',
+        'title'      => 'About Options',
+        'pages'      => array( 'page', ), // Post type
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'show_names' => true, // Show field names on the left
+        'show_on'    => array( 'key' => 'page-template', 'value' => array('template-about.php'), ), // Specific post templates to display this metabox
+
+
+        'fields' => array(
+            array(
+                'name'   => __('Show Info box', 'aletheme'),
+                'desc'   => 'Select to show the box',
+                'id'     => $prefix . 'info_display',
+                'type'   => 'select',
+                'options' => array(
+                        array('name'  => 'Show Block',
+                              'value' => 'show'),
+                        array('name'  => 'Hide Block',
+                              'value' => 'hide'),
+                ),
+            ),
+            array(
+                'name' => __('Title for Info Section', 'aletheme'),
+                'desc' => 'Insert the title',
+                'id'   => $prefix . 'info_title',
+                'std'  => 'My dreams come true',
+                'type' => 'text',
+            ),
+            array(
+                'name' => __('Description for Info Section', 'aletheme'),
+                'desc' => 'Insert the text',
+                'id'   => $prefix . 'info_text',
+                'std'  => 'We need men who can dream of things that never were.',
+                'type' => 'textarea_code',
+            ),
+            array(
+                'name' => __('BG image for Info Section', 'aletheme'),
+                'desc' => 'Upload or select an Image',
+                'id'   => $prefix . 'info_bg',
+                'std'  => '',
+                'type' => 'file',
+            ),
+
+
+
+            array(
+                'name'    => __('Show Service box', 'aletheme'),
+                'desc'    => 'Select to show the box',
+                'id'      => $prefix . 'service_display',
+                'type'    => 'select',
+                'options' => array(
+                    array('name'  => 'Show Block',
+                          'value' => 'show'),
+                    array('name'  => 'Hide Block',
+                          'value' => 'hide'),
+                ),
+            ),
+            array(
+                'name' => __('Service Icon1', 'aletheme'),
+                'desc' => 'Insert the title',
+                'id'   => $prefix . 'service_icon1',
+                'std'  => '',
+                'type' => 'file',
+            ),
+            array(
+                'name' => __('Service text1', 'aletheme'),
+                'desc' => 'Insert the text',
+                'id'   => $prefix . 'service_text1',
+                'std'  => 'Don`t leave a stone unturned. It`s always something, to know you have done the most you could',
+                'type' => 'textarea_code',
+            ),
+             array(
+                 'name' => __('Service Icon2', 'aletheme'),
+                 'desc' => 'Insert the title',
+                 'id'   => $prefix . 'service_icon2',
+                 'std'  => '',
+                 'type' => 'file',
+             ),
+            array(
+                'name' => __('Service text2', 'aletheme'),
+                'desc' => 'Insert the text',
+                'id'   => $prefix . 'service_text2',
+                'std'  => 'Yesterday is but today`s memory, tomorrow is today`s dream',
+                'type' => 'textarea_code',
+            ),
+            array(
+                'name' => __('Service Icon3', 'aletheme'),
+                'desc' => 'Insert the title',
+                'id'   => $prefix . 'service_icon3',
+                'std'  => '',
+                'type' => 'file',
+            ),
+            array(
+                'name' => __('Service text3', 'aletheme'),
+                'desc' => 'Insert the text',
+                'id'   => $prefix . 'service_text3',
+                'std'  => 'A dream is just a dream. A goal is a dream with a plan and a deadline',
+                'type' => 'textarea_code',
+            ),
+            array(
+                'name' => __('Service Icon4', 'aletheme'),
+                'desc' => 'Insert the title',
+                'id'   => $prefix . 'service_icon4',
+                'std'  => '',
+                'type' => 'file',
+            ),
+            array(
+                'name' => __('Service text4', 'aletheme'),
+                'desc' => 'Insert the text',
+                'id'   => $prefix . 'service_text4',
+                'std'  => 'The future belongs to those, who believe in beauty of their dreams',
+                'type' => 'textarea_code',
+            ),
+
+
+            array(
+                'name'   => __('Show People box', 'aletheme'),
+                'desc'    => 'Select to show the box',
+                'id'      => $prefix . 'people_display',
+                'type'    => 'select',
+                'options' => array(
+                    array('name'  => 'Show Block',
+                          'value' => 'show'),
+                    array('name'  => 'Hide Block',
+                          'value' => 'hide'),
+                ),
+            ),
+            array(
+                'name' => __('Title for Our People', 'aletheme'),
+                'desc' => 'Insert the title',
+                'id'   => $prefix . 'people_title',
+                'std'  => 'People about me',
+                'type' => 'text',
+            ),
+            array(
+                'name' => __('Description for Our People', 'aletheme'),
+                'desc' => 'Insert the text',
+                'id'   => $prefix . 'people_text',
+                'std'  => 'Front-end and Beck-end developer',
+                'type' => 'text',
+            ),
+            array(
+                'name' => __('BG image for Our People', 'aletheme'),
+                'desc' => 'Upload or select an Image',
+                'id'   => $prefix . 'people_bg',
+                'std'  => '',
+                'type' => 'file',
+            ),
+        )
+    );
+
+    $meta_boxes[] = array(
+        'id'         => 'people_pages_metabox',
+        'title'      => 'People Options',
+        'pages'      => array( 'people', ), // Post type
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'show_names' => true, // Show field names on the left
+        //'show_on'    => array( 'key' => 'page-template', 'value' => array('template-about.php'), ), // Specific post templates to display this metabox
+
+
+        'fields' => array(
+            array(
+                'name' => __('Team Position', 'aletheme'),
+                'desc' => 'Type here the position',
+                'id'   => $prefix . 'people_post',
+                'type' => 'text',
+            ),
+        )
+    );
+
+    $meta_boxes[] = array(
         'id'         => 'press_page_metabox',
         'title'      => 'Press Page Options',
         'pages'      => array( 'page', ), // Post type
@@ -397,7 +572,7 @@ function aletheme_metaboxes($meta_boxes) {
         'priority'   => 'high',
         'show_names' => true, // Show field names on the left
         'show_on'    => array( 'key' => 'page-template', 'value' => array('template-press.php'), ), // Specific post templates to display this metabox
-        'fields' => array(
+        'fields'     => array(
             array(
                 'name' => 'Press title #1',
                 'desc' => 'Insert the title',
@@ -658,175 +833,176 @@ function aletheme_metaboxes($meta_boxes) {
         'context'    => 'normal',
         'priority'   => 'high',
         'show_names' => true, // Show field names on the left
-        'show_on'    => array( 'key' => 'page-template', 'value' => array('template-about.php'), ), // Specific post templates to display this metabox
+        'show_on'    => array( 'key'   => 'page-template',
+                               'value' => array('template-about.php'), ), // Specific post templates to display this metabox
         'fields' => array(
             array(
                 'name' => 'First member Name',
                 'desc' => 'Insert member name...',
                 'id'   => $prefix . 'memname1',
-                'type'    => 'text',
+                'type' => 'text',
             ),
             array(
                 'name' => 'Second member Name',
                 'desc' => 'Insert member name...',
                 'id'   => $prefix . 'memname2',
-                'type'    => 'text',
+                'type' => 'text',
             ),
             array(
                 'name' => 'Third member Name',
                 'desc' => 'Insert member name...',
                 'id'   => $prefix . 'memname3',
-                'type'    => 'text',
+                'type' => 'text',
             ),
             array(
                 'name' => 'Fourth member Name',
                 'desc' => 'Insert member name...',
                 'id'   => $prefix . 'memname4',
-                'type'    => 'text',
+                'type' => 'text',
             ),
             array(
                 'name' => 'First member Prof',
                 'desc' => 'Insert member prof...',
                 'id'   => $prefix . 'memprof1',
-                'type'    => 'text',
+                'type' => 'text',
             ),
             array(
                 'name' => 'Second member Prof',
                 'desc' => 'Insert member prof...',
                 'id'   => $prefix . 'memprof2',
-                'type'    => 'text',
+                'type' => 'text',
             ),
             array(
                 'name' => 'Third member Prof',
                 'desc' => 'Insert member prof...',
                 'id'   => $prefix . 'memprof3',
-                'type'    => 'text',
+                'type' => 'text',
             ),
             array(
                 'name' => 'Fourth member Prof',
                 'desc' => 'Insert member prof...',
                 'id'   => $prefix . 'memprof4',
-                'type'    => 'text',
+                'type' => 'text',
             ),
             array(
                 'name' => 'First member FB link',
                 'desc' => 'Insert member FB link...',
                 'id'   => $prefix . 'memfb1',
-                'type'    => 'text',
+                'type' => 'text',
             ),
             array(
                 'name' => 'Second member FB link',
                 'desc' => 'Insert member FB link...',
                 'id'   => $prefix . 'memfb2',
-                'type'    => 'text',
+                'type' => 'text',
             ),
             array(
                 'name' => 'Third member FB link',
                 'desc' => 'Insert member FB link...',
                 'id'   => $prefix . 'memfb3',
-                'type'    => 'text',
+                'type' => 'text',
             ),
             array(
                 'name' => 'fourth member FB link',
                 'desc' => 'Insert member FB link...',
                 'id'   => $prefix . 'memfb4',
-                'type'    => 'text',
+                'type' => 'text',
             ),
             array(
                 'name' => 'First member TW link',
                 'desc' => 'Insert member TW link...',
                 'id'   => $prefix . 'memtw1',
-                'type'    => 'text',
+                'type' => 'text',
             ),
             array(
                 'name' => 'Second member TW link',
                 'desc' => 'Insert member TW link...',
                 'id'   => $prefix . 'memtw2',
-                'type'    => 'text',
+                'type' => 'text',
             ),
             array(
                 'name' => 'Third member TW link',
                 'desc' => 'Insert member TW link...',
                 'id'   => $prefix . 'memtw3',
-                'type'    => 'text',
+                'type' => 'text',
             ),
             array(
                 'name' => 'Fourth member TW link',
                 'desc' => 'Insert member TW link...',
                 'id'   => $prefix . 'memtw4',
-                'type'    => 'text',
+                'type' => 'text',
             ),
             array(
                 'name' => 'First member Email',
                 'desc' => 'Insert member email...',
                 'id'   => $prefix . 'memem1',
-                'type'    => 'text',
+                'type' => 'text',
             ),
             array(
                 'name' => 'Second member Email',
                 'desc' => 'Insert member email...',
                 'id'   => $prefix . 'memem2',
-                'type'    => 'text',
+                'type' => 'text',
             ),
             array(
                 'name' => 'Third member Email',
                 'desc' => 'Insert member email...',
                 'id'   => $prefix . 'memem3',
-                'type'    => 'text',
+                'type' => 'text',
             ),
             array(
                 'name' => 'Fourth member Email',
                 'desc' => 'Insert member email...',
                 'id'   => $prefix . 'memem4',
-                'type'    => 'text',
+                'type' => 'text',
             ),
             array(
                 'name' => 'First member Description',
                 'desc' => 'Insert member description...',
                 'id'   => $prefix . 'memdesc1',
-                'type'    => 'wysiwyg',
+                'type' => 'wysiwyg',
             ),
             array(
                 'name' => 'Second member Description',
                 'desc' => 'Insert member description...',
                 'id'   => $prefix . 'memdesc2',
-                'type'    => 'wysiwyg',
+                'type' => 'wysiwyg',
             ),
             array(
                 'name' => 'Third member Description',
                 'desc' => 'Insert member description...',
                 'id'   => $prefix . 'memdesc3',
-                'type'    => 'wysiwyg',
+                'type' => 'wysiwyg',
             ),
             array(
                 'name' => 'Fourth member Description',
                 'desc' => 'Insert member description...',
                 'id'   => $prefix . 'memdesc4',
-                'type'    => 'wysiwyg',
+                'type' => 'wysiwyg',
             ),
             array(
                 'name' => 'First member avatar',
                 'desc' => 'Insert member avatar...',
                 'id'   => $prefix . 'memava1',
-                'type'    => 'file',
+                'type' => 'file',
             ),
             array(
                 'name' => 'Second member avatar',
                 'desc' => 'Insert member avatar...',
                 'id'   => $prefix . 'memava2',
-                'type'    => 'file',
+                'type' => 'file',
             ),
             array(
                 'name' => 'Third member avatar',
                 'desc' => 'Insert member avatar...',
                 'id'   => $prefix . 'memava3',
-                'type'    => 'file',
+                'type' => 'file',
             ),
             array(
                 'name' => 'Fourth member avatar',
                 'desc' => 'Insert member avatar...',
                 'id'   => $prefix . 'memava4',
-                'type'    => 'file',
+                'type' => 'file',
             ),
         )
     );
@@ -877,7 +1053,14 @@ function aletheme_get_images_sizes() {
             ),
         ),
 
-
+        'people' => array(
+            array(
+                'name'      => 'people-user',
+                'width'     => 87,
+                'height'    => 87,
+                'crop'      => true,
+            ),
+        ),
     );
 }
 
@@ -890,57 +1073,74 @@ function aletheme_get_post_types() {
 	return array(
         'gallery' => array(
             'config' => array(
-                'public' => true,
-                'menu_position' => 20,
-                'has_archive'   => true,
-                'supports'=> array(
+                'public'           => true,
+                'menu_position'    => 20,
+                'has_archive'      => true,
+                'supports'         => array(
                     'title',
                     'editor',
                     'thumbnail',
                 ),
-                'show_in_nav_menus'=> true,
+                'show_in_nav_menus' => true,
             ),
             'singular' => 'Gallery',
             'multiple' => 'Galleries',
-            'columns'    => array(
+            'columns'  => array(
                 'first_image',
             )
         ),
         'services' => array(
             'config' => array(
-                'public' => true,
-                'menu_position' => 20,
-                'menu_icon' => 'dashicons-format-audio',
-                'has_archive'   => true,
-                'supports'=> array(
+                'public'           => true,
+                'menu_position'    => 20,
+                'menu_icon'        => 'dashicons-format-audio',
+                'has_archive'      => true,
+                'supports'         => array(
                     'title',
                     'editor',
                     'thumbnail',
                 ),
-                'show_in_nav_menus'=> true,
+                'show_in_nav_menus' => true,
             ),
             'singular' => 'Service',
             'multiple' => 'Services'
         ),
         'article' => array(
             'config' => array(
-                'public' => true,
-                'menu_position' => 20,
-                'has_archive'   => true,
-                'supports'=> array(
+                'public'           => true,
+                'menu_position'    => 20,
+                'has_archive'      => true,
+                'supports'         => array(
                     'title',
                     'editor',
                     'thumbnail',
                     'excerpt',
                     'comments'
                 ),
-                'show_in_nav_menus'=> true,
+                'show_in_nav_menus' => true,
             ),
             'singular' => 'Article',
             'multiple' => 'Articles',
-            'columns'    => array(
+            'columns'  => array(
                 'first_image',
             )
+        ),
+        'people' => array(
+            'config' => array(
+                'public'           => true,
+                'menu_position'    => 20,
+                'has_archive'      => true,
+                'supports'         => array(
+                    'title',
+                    'editor',
+                    'thumbnail',
+                    'excerpt',
+                    'thumbnail',
+                ),
+                'show_in_nav_menus' => true,
+            ),
+            'singular' => 'People',
+            'multiple' => 'People',
         ),
     );
 }

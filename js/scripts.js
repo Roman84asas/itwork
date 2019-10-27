@@ -3,10 +3,46 @@ jQuery(function($) {
 
     // Custom jQuery Code Here
 
+    //Parallax
+    let $window = $(window);
+    if($('section[data-type="background"]').length){
+        $('section[data-type="background"]').each(function(){
+
+            let $obj = $(this);
+            let offset = $obj.offset().top;
+
+            $(window).scroll(function()
+            {
+                offset = $obj.offset().top;
+
+                if ($window.scrollTop() > (offset - window.innerHeight))
+                {
+                    let yPos = -(($window.scrollTop() - offset) / 2 );
+                    let coords = '50% ' + ( yPos ) + 'px';
+                    $obj.css({ backgroundPosition:  coords });
+                }
+            });
+            $(window).resize(function()
+            {
+                offset = $obj.offset().top;
+            });
+        });
+    }
+
+    $('.people_list').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        nextArrow: '.right_arrow .right',
+        prevArrow: '.left_arrow .left'
+    });
+
     $('.portfolioslider').flexslider({
         animation:'slide',
         smoothHeight:true,
         controlNav: false,
+        prevText: "<i class=\"fas fa-angle-left\"></i>",
+        nextText: "<i class=\"fas fa-angle-right\"></i>",
         touch: true,
     });
 

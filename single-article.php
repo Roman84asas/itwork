@@ -1,10 +1,13 @@
 <?php get_header(); ?>
 
-    <div class="container single_article">
+    <div class="single_article">
         <div class="wrapper">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
                 <div class="inner_wrapper">
-                    <h2 class="post_title"><?php the_title(); ?></h2>
+                    <h2 class="post_title">
+                        <?php the_title(); ?>
+                    </h2>
 
                     <?php if(has_excerpt()){ ?>
                         <div class="excerpt">
@@ -17,7 +20,7 @@
                             <i class="fa fa-user" aria-hidden="true"></i> <?php echo the_author_posts_link(); ?>
                         </div>
                         <div class="post_date">
-                            <i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo get_the_date(); ?>
+                            <i class="far fa-clock"></i> <?php echo get_the_date(); ?>
                         </div>
                     </div>
                 </div>
