@@ -83,8 +83,7 @@ function is_blog () {
  */
 function ale_enqueue_scripts() {
 
-	// add html5 for old browsers.
-	wp_register_script( 'html5-shim', 'http://html5shim.googlecode.com/svn/trunk/html5.js', array( 'jquery' ), ALETHEME_THEME_VERSION, false );
+
 	// add modernizr
 	wp_register_script( 'ale_modernizr', THEME_URL . '/js/libs/modernizr-2.5.3.min.js', array( 'jquery' ), ALETHEME_THEME_VERSION, false );
 
@@ -94,14 +93,10 @@ function ale_enqueue_scripts() {
 
 	wp_enqueue_script( 'jquery-form' );
 	wp_enqueue_script( 'ale_modernizr' );
-	wp_enqueue_script( 'html5-shim' );
+	wp_enqueue_script( 'slick' );
 
 	if (is_post_type_archive('article')) {
 	    wp_enqueue_script( 'masonry' );
-	}
-
-	if (is_page_template('template-about.php')) {
-	    wp_enqueue_script( 'slick' );
 	}
 
 

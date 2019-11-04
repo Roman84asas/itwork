@@ -545,6 +545,165 @@ function aletheme_metaboxes($meta_boxes) {
     );
 
     $meta_boxes[] = array(
+        'id'         => 'home_page_metabox',
+        'title'      => 'Home Options',
+        'pages'      => array( 'page', ), // Post type
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'show_names' => true, // Show field names on the left
+        'show_on'    => array( 'key' => 'page-template', 'value' => array('page-home.php'), ), // Specific post templates to display this metabox
+
+
+        'fields' => array(
+            array(
+                'name' => '',
+                'desc' => '',
+                'id'   => $prefix . 'descr',
+                'type' => 'wysiwyg',
+            ),
+            array(
+                'name'   => __('Show Info box', 'aletheme'),
+                'desc'   => 'Select to show the box',
+                'id'     => $prefix . 'info_display',
+                'type'   => 'select',
+                'options' => array(
+                    array('name'  => 'Show Block',
+                        'value' => 'show'),
+                    array('name'  => 'Hide Block',
+                        'value' => 'hide'),
+                ),
+            ),
+            array(
+                'name' => __('Title for Info Section', 'aletheme'),
+                'desc' => 'Insert the title',
+                'id'   => $prefix . 'info_title',
+                'std'  => 'My dreams come true',
+                'type' => 'text',
+            ),
+            array(
+                'name' => __('Description for Info Section', 'aletheme'),
+                'desc' => 'Insert the text',
+                'id'   => $prefix . 'info_text',
+                'std'  => 'We need men who can dream of things that never were.',
+                'type' => 'textarea_code',
+            ),
+            array(
+                'name' => __('BG image for Info Section', 'aletheme'),
+                'desc' => 'Upload or select an Image',
+                'id'   => $prefix . 'info_bg',
+                'std'  => '',
+                'type' => 'file',
+            ),
+
+
+
+            array(
+                'name'    => __('Show Service box', 'aletheme'),
+                'desc'    => 'Select to show the box',
+                'id'      => $prefix . 'service_display',
+                'type'    => 'select',
+                'options' => array(
+                    array('name'  => 'Show Block',
+                        'value' => 'show'),
+                    array('name'  => 'Hide Block',
+                        'value' => 'hide'),
+                ),
+            ),
+            array(
+                'name' => __('Service Icon1', 'aletheme'),
+                'desc' => 'Insert the title',
+                'id'   => $prefix . 'service_icon1',
+                'std'  => '',
+                'type' => 'file',
+            ),
+            array(
+                'name' => __('Service text1', 'aletheme'),
+                'desc' => 'Insert the text',
+                'id'   => $prefix . 'service_text1',
+                'std'  => 'Don`t leave a stone unturned. It`s always something, to know you have done the most you could',
+                'type' => 'textarea_code',
+            ),
+            array(
+                'name' => __('Service Icon2', 'aletheme'),
+                'desc' => 'Insert the title',
+                'id'   => $prefix . 'service_icon2',
+                'std'  => '',
+                'type' => 'file',
+            ),
+            array(
+                'name' => __('Service text2', 'aletheme'),
+                'desc' => 'Insert the text',
+                'id'   => $prefix . 'service_text2',
+                'std'  => 'Yesterday is but today`s memory, tomorrow is today`s dream',
+                'type' => 'textarea_code',
+            ),
+            array(
+                'name' => __('Service Icon3', 'aletheme'),
+                'desc' => 'Insert the title',
+                'id'   => $prefix . 'service_icon3',
+                'std'  => '',
+                'type' => 'file',
+            ),
+            array(
+                'name' => __('Service text3', 'aletheme'),
+                'desc' => 'Insert the text',
+                'id'   => $prefix . 'service_text3',
+                'std'  => 'A dream is just a dream. A goal is a dream with a plan and a deadline',
+                'type' => 'textarea_code',
+            ),
+            array(
+                'name' => __('Service Icon4', 'aletheme'),
+                'desc' => 'Insert the title',
+                'id'   => $prefix . 'service_icon4',
+                'std'  => '',
+                'type' => 'file',
+            ),
+            array(
+                'name' => __('Service text4', 'aletheme'),
+                'desc' => 'Insert the text',
+                'id'   => $prefix . 'service_text4',
+                'std'  => 'The future belongs to those, who believe in beauty of their dreams',
+                'type' => 'textarea_code',
+            ),
+
+
+            array(
+                'name'   => __('Show People box', 'aletheme'),
+                'desc'    => 'Select to show the box',
+                'id'      => $prefix . 'people_display',
+                'type'    => 'select',
+                'options' => array(
+                    array('name'  => 'Show Block',
+                        'value' => 'show'),
+                    array('name'  => 'Hide Block',
+                        'value' => 'hide'),
+                ),
+            ),
+            array(
+                'name' => __('Title for Our People', 'aletheme'),
+                'desc' => 'Insert the title',
+                'id'   => $prefix . 'people_title',
+                'std'  => 'People about me',
+                'type' => 'text',
+            ),
+            array(
+                'name' => __('Description for Our People', 'aletheme'),
+                'desc' => 'Insert the text',
+                'id'   => $prefix . 'people_text',
+                'std'  => 'Front-end and Beck-end developer',
+                'type' => 'text',
+            ),
+            array(
+                'name' => __('BG image for Our People', 'aletheme'),
+                'desc' => 'Upload or select an Image',
+                'id'   => $prefix . 'people_bg',
+                'std'  => '',
+                'type' => 'file',
+            ),
+        )
+    );
+
+    $meta_boxes[] = array(
         'id'         => 'people_pages_metabox',
         'title'      => 'People Options',
         'pages'      => array( 'people', ), // Post type
@@ -1089,22 +1248,6 @@ function aletheme_get_post_types() {
                 'first_image',
             )
         ),
-        'services' => array(
-            'config' => array(
-                'public'           => true,
-                'menu_position'    => 20,
-                'menu_icon'        => 'dashicons-format-audio',
-                'has_archive'      => true,
-                'supports'         => array(
-                    'title',
-                    'editor',
-                    'thumbnail',
-                ),
-                'show_in_nav_menus' => true,
-            ),
-            'singular' => 'Service',
-            'multiple' => 'Services'
-        ),
         'article' => array(
             'config' => array(
                 'public'           => true,
@@ -1162,16 +1305,6 @@ function aletheme_get_taxonomies() {
             ),
             'singular'    => 'Gallery Category',
             'multiple'    => 'Gallery Categories',
-        ),
-        'services-category'    => array(
-            'for'        => array('services'),
-            'config'    => array(
-                'sort'        => true,
-                'args'        => array('orderby' => 'term_order'),
-                'hierarchical' => true,
-            ),
-            'singular'    => 'Service Category',
-            'multiple'    => 'Services Categories',
         ),
         'article-category'    => array(
             'for'        => array('article'),

@@ -4,8 +4,9 @@ jQuery(function($) {
     // Custom jQuery Code Here
 
     //Parallax
-    let $window = $(window);
+    const iwindow = $(window);
     if($('section[data-type="background"]').length){
+
         $('section[data-type="background"]').each(function(){
 
             let $obj = $(this);
@@ -15,9 +16,9 @@ jQuery(function($) {
             {
                 offset = $obj.offset().top;
 
-                if ($window.scrollTop() > (offset - window.innerHeight))
+                if (iwindow.scrollTop() > (offset - window.innerHeight))
                 {
-                    let yPos = -(($window.scrollTop() - offset) / 2 );
+                    let yPos = -((iwindow.scrollTop() - offset) / 2 );
                     let coords = '50% ' + ( yPos ) + 'px';
                     $obj.css({ backgroundPosition:  coords });
                 }
@@ -29,7 +30,8 @@ jQuery(function($) {
         });
     }
 
-    $('.people_list').slick({
+    let $jq = jQuery.noConflict();
+    $jq('.people_list').slick({
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -48,10 +50,12 @@ jQuery(function($) {
 
     $('.homeslider').flexslider({
         animation:'slide',
-        //smoothHeight:true,
         prevText: "<i class=\"fas fa-angle-left\"></i>",
         nextText: "<i class=\"fas fa-angle-right\"></i>",
-        controlNav: false
+        controlNav: false,
+        touch: true,
+        useCSS: false,
+
     });
 
     $('.homeslider .flex-viewport').css('overflow', 'visible');
