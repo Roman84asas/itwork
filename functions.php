@@ -26,3 +26,10 @@ if ( is_readable($locale_file) )
  * updates only.
  ****************************************************************/
 
+function SearchFilter($query) {
+    if ($query->is_search) {
+        $query->set('post_type', 'article');
+    }
+    return $query;
+}
+add_filter('pre_get_posts','SearchFilter');

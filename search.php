@@ -40,7 +40,7 @@
                 <ul>
                     <?php
                     $args = array(
-                        'show_option_all'    => '',
+                        'show_option_all'    => 'Article Category',
                         'orderby'            => 'name',
                         'order'              => 'ASC',
                         'style'              => 'list',
@@ -62,7 +62,7 @@
                         'depth'              => 0,
                         'current_category'   => 0,
                         'pad_counts'         => 0,
-                        'taxonomy'           => 'category',
+                        'taxonomy'           => 'article-category',
                         'walker'             => null
                     );
                     wp_list_categories($args); ?>
@@ -114,7 +114,7 @@
 
         <!-- Blog Footer  -->
         <div class="blog-footer">
-            <?php ale_part('archives'); ?>
+            <?php ale_part('article'); ?>
         </div>
 
     </div>

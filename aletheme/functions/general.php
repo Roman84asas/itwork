@@ -1270,7 +1270,7 @@ function get_breadcrumbs() {
 
     $text['home']     = __('Home','aletheme');
     $text['category'] = __('Archive','aletheme').' "%s"';
-    $text['search']   = __('Search results','aletheme').' "%s"';
+    $text['search']   = __('Results for: ','aletheme').' "%s"';
     $text['tag']      = __('Tag','aletheme').' "%s"';
     $text['author']   = __('Author','aletheme').' %s';
     $text['404']      = __('Error 404','aletheme');
