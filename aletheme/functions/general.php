@@ -1289,8 +1289,9 @@ function get_breadcrumbs() {
     $link_after   = '</span>';
     $link_attr    = ' rel="v:url" property="v:title"';
     $link         = $link_before . '<a' . $link_attr . ' href="%1$s">%2$s</a>' . $link_after;
-    $parent_id    = $parent_id_2 = $post->post_parent;
+    $parent_id    = $parent_id_2 = 0;
     $frontpage_id = get_option('page_on_front');
+
 
     if (is_home() || is_front_page()) {
 

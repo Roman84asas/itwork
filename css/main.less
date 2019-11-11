@@ -746,6 +746,10 @@ footer.main-footer {
     text-transform: none;
     margin-bottom: 45px;
     font-family: 'Playfair Display SC', serif;
+
+    a {
+      color: inherit;
+    }
   }
 
   .page_content {
@@ -1082,6 +1086,15 @@ footer.main-footer {
       }
     }
   }
+
+  section.not-found {
+    p {
+      color: red;
+      text-align: center;
+      font-size: 16px;
+    }
+
+  }
 }
 
 /*Single page*/
@@ -1173,7 +1186,21 @@ footer.main-footer {
   .post_content {
     margin: 0 170px;
     color:@grey-color;
-    font-size: 12px;
+    font-size: 14px;
+
+    .gatsby-code-jsx {
+      margin: 40px 0;
+      padding: 15px;
+      box-shadow: none;
+      background-color: #eef6fb;
+
+      .gatsby-code-jsx {
+        margin: 0;
+        span {
+          font-size: 15px;
+        }
+      }
+    }
   }
 }
 

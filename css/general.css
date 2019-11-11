@@ -1284,6 +1284,9 @@ footer.main-footer .bottom_footer .footer_social i {
   margin-bottom: 45px;
   font-family: 'Playfair Display SC', serif;
 }
+.container h2.page_title a {
+  color: inherit;
+}
 .container .page_content {
   color: #a1a1a1;
   font-size: 14px;
@@ -1637,6 +1640,11 @@ footer.main-footer .bottom_footer .footer_social i {
   -o-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out;
 }
+.article_page section.not-found p {
+  color: red;
+  text-align: center;
+  font-size: 16px;
+}
 /*Single page*/
 .single_article,
 .single_blog {
@@ -1737,7 +1745,22 @@ footer.main-footer .bottom_footer .footer_social i {
 .single_blog .post_content {
   margin: 0 170px;
   color: #a1a1a1;
-  font-size: 12px;
+  font-size: 14px;
+}
+.single_article .post_content .gatsby-code-jsx,
+.single_blog .post_content .gatsby-code-jsx {
+  margin: 40px 0;
+  padding: 15px;
+  box-shadow: none;
+  background-color: #eef6fb;
+}
+.single_article .post_content .gatsby-code-jsx .gatsby-code-jsx,
+.single_blog .post_content .gatsby-code-jsx .gatsby-code-jsx {
+  margin: 0;
+}
+.single_article .post_content .gatsby-code-jsx .gatsby-code-jsx span,
+.single_blog .post_content .gatsby-code-jsx .gatsby-code-jsx span {
+  font-size: 15px;
 }
 .inner_wrapper {
   margin: 0 120px;
