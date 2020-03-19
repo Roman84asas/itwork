@@ -75,8 +75,8 @@
                 }
                 ?>
                 <div class="donate_button">
-                    <a href="<?php //echo esc_attr(ale_get_option('donate_link')); ?>">
-                        <?php _e('Donate', 'itwork') ?>
+                    <a href="<?php echo esc_attr(home_url('/contacts')); ?>">
+                        <?php _e('Order', 'itwork') ?>
                     </a>
                 </div>
             </div>

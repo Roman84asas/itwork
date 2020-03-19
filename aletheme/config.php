@@ -551,7 +551,7 @@ function aletheme_metaboxes($meta_boxes) {
         'context'    => 'normal',
         'priority'   => 'high',
         'show_names' => true, // Show field names on the left
-        'show_on'    => array( 'key' => 'page-template', 'value' => array(' -home.php'), ), // Specific post templates to display this metabox
+        'show_on'    => array( 'key' => 'page-template', 'value' => array('page-home.php'), ), // Specific post templates to display this metabox
 
 
         'fields' => array(

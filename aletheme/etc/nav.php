@@ -145,6 +145,8 @@ if (is_admin()) {
     }
     add_action( 'admin_head-nav-menus.php', 'ale_inject_archives_menu_meta_box');
 
+
+
     /**
      * Add Advanced Navigation Meta Box
      */
