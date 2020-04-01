@@ -30,5 +30,36 @@ get_header(); ?>
     </div>
 </section>
 
+<section class="curs">
+    <div class="curs_val">
+        <span>
+           <?php $sum = 2500;
+           /*$languages = simplexml_load_file("http://www.cbr.ru/scripts/XML_daily.asp");
+           if(isset($_COOKIE["cursvalut"])) { echo $_COOKIE["cursvalut"]; }
+           else {
+            //валюты
+               foreach ($languages->Valute as $lang) {
+                   if ($lang["ID"] == 'R01335') { //тип валюты
+                       $koeficient1 = round(str_replace(',','.',$lang->Value), 2); //ее значение
+                       $koeficient1a = $lang->Nominal.' '.$lang->Name.' = '.$koeficient1.' руб.'; //запоминаем номинал
+                       SetCookie("cursvalut",$koeficient1a,time()+3600*12);} //в куках
+               }
+           }*/
+           $languages = simplexml_load_file("http://www.cbr.ru/scripts/XML_daily.asp");
+           //валюты
+           foreach ($languages->Valute as $lang) {
+               if ($lang["ID"] == 'R01335') { //тип валюты
+                   $koeficient1 = round(str_replace(',','.',$lang->Value), 4);
+               }
+           }
+           $sum = round(100 / $koeficient1 * $sum, 0);
+
+           echo $sum;
+           ?>
+        тенге.
+        </span>
+    </div>
+</section>
+
 <?php get_footer();
 

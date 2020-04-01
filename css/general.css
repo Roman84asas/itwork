@@ -1039,6 +1039,17 @@ html[xmlns] .slides {
   max-width: 100%;
   height: 730px;
 }
+.curs {
+  height: 500px;
+}
+.curs .curs_val {
+  display: flex;
+  height: 100%;
+}
+.curs .curs_val span {
+  margin: auto;
+  font-size: 24px;
+}
 /*
 *Footer Styles
 */
