@@ -9,7 +9,7 @@ function get_large_value_from_bank($sum) {
             $koeficient1 = round(str_replace(',','.',$lang->Value), 4);
         }
     }
-    $sum_large_number = round(100 / $koeficient1 * $sum, 2);
+    $sum_large_number = round(100 / $koeficient1 * $sum, 0);
     echo $sum_large_number;
 }
 

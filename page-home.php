@@ -34,8 +34,7 @@ get_header(); ?>
     <div class="curs_val">
         <span>
            <?php
-           //$sum = 2500;
-           $sum = 1.15;
+           $sum = 2500;
            do_action('get_large_value_from_bank', $sum)
            ?>
         тенге.
