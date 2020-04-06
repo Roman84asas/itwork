@@ -34,17 +34,9 @@ get_header(); ?>
     <div class="curs_val">
         <span>
            <?php
-           $sum = 2500;
-           $languages = simplexml_load_file("http://www.cbr.ru/scripts/XML_daily.asp");
-           //валюты
-           foreach ($languages->Valute as $lang) {
-               if ($lang["ID"] == 'R01335') { //тип валюты
-                   $koeficient1 = round(str_replace(',','.',$lang->Value), 4);
-               }
-           }
-           $sum = round(100 / $koeficient1 * $sum, 0);
-
-           echo $sum;
+           //$sum = 2500;
+           $sum = 1.15;
+           do_action('get_large_value_from_bank', $sum)
            ?>
         тенге.
         </span>
