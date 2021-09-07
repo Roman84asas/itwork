@@ -13,7 +13,7 @@ $ale_h6 = ale_get_option('h6sty');
 <?php
     if(ale_get_option('headerfontex')){ $headerfontex = ":".ale_get_option('headerfontex'); } else {$headerfontex =""; }
     if(ale_get_option('mainfontex')){ $mainfontex = ":".ale_get_option('mainfontex'); } else {$mainfontex = "";}
-    if(ale_get_option('headerfont')){ echo "<link href='http://fonts.googleapis.com/css?family=".ale_get_option('headerfont').$headerfontex."|".ale_get_option('mainfont').$mainfontex."' rel='stylesheet' type='text/css'>"; }
+    if(ale_get_option('headerfont')){ echo "<link href='https://fonts.googleapis.com/css?family=".ale_get_option('headerfont').$headerfontex."|".ale_get_option('mainfont').$mainfontex."' rel='stylesheet' type='text/css'>"; }
 ?>
 <style type='text/css'>
     body {

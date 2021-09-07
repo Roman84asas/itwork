@@ -103,7 +103,7 @@ define('ALETHEME_HELP_URL', 'http://alethemes.com/help');
 /****************************************************************
  * Google Fonts Constants
  ****************************************************************/
-define('ALETHEME_GOOGLE_FONTS_URL', 'http://fonts.googleapis.com/css?family=');
+define('ALETHEME_GOOGLE_FONTS_URL', 'https://fonts.googleapis.com/css?family=');
 
 /****************************************************************
  * Find The Configuration File
